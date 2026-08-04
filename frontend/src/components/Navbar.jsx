@@ -11,7 +11,9 @@ export default function Navbar() {
       </Link>
       <div className="nav-links">
         <Link to="/services" className={isActive('/services')}>Services</Link>
-        <Link to="/pricing" className={isActive('/pricing')}>Pricing</Link>
+        <Link to="/pricing" className={isActive('/pricing')}>Pricing & Calculator</Link>
+        <Link to="/case-studies" className={isActive('/case-studies')}>Case Studies</Link>
+        <Link to="/about" className={isActive('/about')}>About Us</Link>
       </div>
       <div>
         <Link to="/portal" className="btn btn-primary">Client Portal</Link>

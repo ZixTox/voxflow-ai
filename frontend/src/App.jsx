@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import Pricing from './pages/Pricing';
 import Portal from './pages/Portal';
+import About from './pages/About';
+import CaseStudies from './pages/CaseStudies';
 
 function App() {
   // Use basename for GitHub pages support
@@ -17,6 +19,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/about" element={<About />} />
           <Route path="/portal" element={<Portal />} />
         </Routes>
       </main>
