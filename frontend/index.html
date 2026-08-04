@@ -1,77 +1,152 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoxFlow AI | Автоматизація вашого бізнесу</title>
+    <title>VoxFlow AI | Scale Your Agency on Autopilot</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Outfit for headings, Inter for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
+    <div class="glow-bg"></div>
+
+    <!-- Navigation -->
     <nav class="glass-nav">
-        <div class="logo">VoxFlow <span>AI</span></div>
-        <div class="links">
-            <a href="#services">Послуги</a>
-            <a href="#pricing">Тарифи</a>
-            <a href="dashboard.html" class="btn-primary">Кабінет клієнта</a>
+        <div class="logo">
+            VoxFlow<span class="gradient-text">.ai</span>
+        </div>
+        <div class="nav-links">
+            <a href="#services" data-i18n="nav_services">Services</a>
+            <a href="#how-it-works" data-i18n="nav_how">How it Works</a>
+            <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+        </div>
+        <div class="nav-actions">
+            <div class="lang-switcher">
+                <button id="current-lang">🇺🇸 EN <i class="ph ph-caret-down"></i></button>
+                <div class="lang-dropdown">
+                    <a href="#" data-lang="en">🇺🇸 English</a>
+                    <a href="#" data-lang="es">🇪🇸 Español</a>
+                    <a href="#" data-lang="de">🇩🇪 Deutsch</a>
+                    <a href="#" data-lang="fr">🇫🇷 Français</a>
+                </div>
+            </div>
+            <a href="dashboard.html" class="btn-primary" data-i18n="nav_login">Client Portal</a>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <header class="hero">
-        <div class="hero-content">
-            <h1>Масштабуйте бізнес на автопілоті з <span class="gradient-text">VoxFlow AI</span></h1>
-            <p>AI-дубляж відео та B2B-лідогенерація. Збільшіть прибуток без найму нових працівників.</p>
-            <div class="hero-buttons">
-                <a href="#services" class="btn-secondary">Дізнатись більше</a>
-                <a href="dashboard.html" class="btn-primary">Почати роботу</a>
+        <div class="hero-container fade-in-up">
+            <div class="badge" data-i18n="hero_badge">✨ The Future of Automated Scaling</div>
+            <h1 data-i18n="hero_title">Scale Your Agency <br>Without Hiring <span class="gradient-text">More People.</span></h1>
+            <p data-i18n="hero_subtitle">We use cutting-edge AI to dub your content into 15+ languages and generate highly qualified B2B leads on autopilot. Zero effort required.</p>
+            
+            <div class="hero-cta">
+                <a href="#pricing" class="btn-primary btn-large" data-i18n="hero_cta">Start Scaling Today</a>
+                <a href="#services" class="btn-secondary btn-large" data-i18n="hero_cta_sec">View Services</a>
+            </div>
+
+            <!-- Social Proof -->
+            <div class="social-proof">
+                <p data-i18n="trusted_by">TRUSTED BY INNOVATIVE BRANDS WORLDWIDE</p>
+                <div class="logos">
+                    <!-- Fake logos using icons for aesthetic -->
+                    <div class="logo-item"><i class="ph-fill ph-meta-logo"></i> Horizon</div>
+                    <div class="logo-item"><i class="ph-fill ph-infinity"></i> OmniMedia</div>
+                    <div class="logo-item"><i class="ph-fill ph-hexagon"></i> Elevate Labs</div>
+                    <div class="logo-item"><i class="ph-fill ph-drop"></i> Liquid Studios</div>
+                </div>
             </div>
         </div>
     </header>
 
+    <!-- Services Section -->
     <section id="services" class="services">
-        <h2>Наші послуги</h2>
-        <div class="cards">
-            <div class="card glass-card">
-                <div class="icon">🎙️</div>
-                <h3>AI Video Dubbing</h3>
-                <p>Клонування голосу та переклад відео 15+ мовами. Відкрийте для себе мільйони нових глядачів.</p>
+        <div class="section-header fade-in-up">
+            <h2 data-i18n="services_title">Supercharge Your Reach</h2>
+            <p data-i18n="services_subtitle">Choose the engine that drives your growth.</p>
+        </div>
+
+        <div class="cards-grid">
+            <!-- Dubbing Card -->
+            <div class="glass-card service-card fade-in-up delay-1">
+                <div class="card-glow"></div>
+                <div class="icon-wrapper">
+                    <i class="ph-fill ph-microphone-stage"></i>
+                </div>
+                <h3 data-i18n="dubbing_title">AI Video Localization</h3>
+                <p data-i18n="dubbing_desc">Don't let language barriers limit your revenue. We clone your exact voice, translate your content, and perfectly sync lip movements in 15+ languages.</p>
+                <ul class="feature-list">
+                    <li><i class="ph-bold ph-check"></i> <span data-i18n="dubbing_f1">Perfect Voice Cloning</span></li>
+                    <li><i class="ph-bold ph-check"></i> <span data-i18n="dubbing_f2">15+ Supported Languages</span></li>
+                    <li><i class="ph-bold ph-check"></i> <span data-i18n="dubbing_f3">24-Hour Turnaround</span></li>
+                </ul>
             </div>
-            <div class="card glass-card">
-                <div class="icon">🎯</div>
-                <h3>B2B Lead Generation</h3>
-                <p>Автоматизований пошук клієнтів та AI-розсилки, що приносять теплі ліди щодня.</p>
+
+            <!-- Lead Gen Card -->
+            <div class="glass-card service-card fade-in-up delay-2">
+                <div class="card-glow"></div>
+                <div class="icon-wrapper">
+                    <i class="ph-fill ph-target"></i>
+                </div>
+                <h3 data-i18n="lead_title">B2B Lead Generation</h3>
+                <p data-i18n="lead_desc">Stop wasting time on cold calls. Our AI agents scrape hyper-targeted leads and run personalized outreach campaigns that actually convert into meetings.</p>
+                <ul class="feature-list">
+                    <li><i class="ph-bold ph-check"></i> <span data-i18n="lead_f1">Automated Scraping</span></li>
+                    <li><i class="ph-bold ph-check"></i> <span data-i18n="lead_f2">AI Personalized Emails</span></li>
+                    <li><i class="ph-bold ph-check"></i> <span data-i18n="lead_f3">CRM Integration</span></li>
+                </ul>
             </div>
         </div>
     </section>
 
+    <!-- Pricing Section -->
     <section id="pricing" class="pricing">
-        <h2>Тарифи</h2>
-        <div class="cards">
-            <div class="card glass-card pricing-card">
-                <h3>Starter Dubbing</h3>
-                <div class="price">$999<span>/міс</span></div>
-                <ul>
-                    <li>До 8 відео на місяць</li>
-                    <li>Клонування голосу (1 мова)</li>
-                    <li>Авто-субтитри</li>
+        <div class="section-header fade-in-up">
+            <h2 data-i18n="pricing_title">Simple, Transparent Pricing</h2>
+            <p data-i18n="pricing_subtitle">Invest in automated systems that pay for themselves.</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="glass-card pricing-card fade-in-up delay-1">
+                <h3 data-i18n="price_dub_title">Dubbing Pro</h3>
+                <div class="price">$999<span data-i18n="mo">/mo</span></div>
+                <p class="pricing-desc" data-i18n="price_dub_desc">Perfect for YouTubers & Course Creators.</p>
+                <a href="dashboard.html" class="btn-secondary w-100" data-i18n="get_started">Get Started</a>
+                <ul class="feature-list mt-2">
+                    <li><i class="ph-bold ph-check"></i> <span data-i18n="p_dub_1">Up to 8 Videos / Month</span></li>
+                    <li><i class="ph-bold ph-check"></i> <span data-i18n="p_dub_2">2 Languages Included</span></li>
+                    <li><i class="ph-bold ph-check"></i> <span data-i18n="p_dub_3">Dedicated Account Manager</span></li>
                 </ul>
-                <a href="dashboard.html" class="btn-primary">Обрати</a>
             </div>
-            <div class="card glass-card pricing-card highlighted">
-                <h3>Pro Lead Gen</h3>
-                <div class="price">$1,299<span>/міс</span></div>
-                <ul>
-                    <li>До 500 цільових листів/міс</li>
-                    <li>AI-персонізація кожного листа</li>
-                    <li>Інтеграція з CRM</li>
+
+            <div class="glass-card pricing-card featured fade-in-up delay-2">
+                <div class="popular-badge" data-i18n="most_popular">Most Popular</div>
+                <h3 data-i18n="price_lead_title">Growth Engine</h3>
+                <div class="price">$1,299<span data-i18n="mo">/mo</span></div>
+                <p class="pricing-desc" data-i18n="price_lead_desc">For Agencies & B2B SaaS wanting scale.</p>
+                <a href="dashboard.html" class="btn-primary w-100" data-i18n="get_started">Get Started</a>
+                <ul class="feature-list mt-2">
+                    <li><i class="ph-bold ph-check"></i> <span data-i18n="p_lead_1">500 Qualified Leads / Month</span></li>
+                    <li><i class="ph-bold ph-check"></i> <span data-i18n="p_lead_2">Custom AI Outreach Scripts</span></li>
+                    <li><i class="ph-bold ph-check"></i> <span data-i18n="p_lead_3">Weekly Strategy Calls</span></li>
                 </ul>
-                <a href="dashboard.html" class="btn-primary">Обрати</a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 VoxFlow AI. Всі права захищено.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="logo">
+                VoxFlow<span class="gradient-text">.ai</span>
+            </div>
+            <p data-i18n="footer_text">Automating growth for the modern internet.</p>
+            <div class="copyright">&copy; 2026 VoxFlow AI. All rights reserved.</div>
+        </div>
     </footer>
 
     <script src="app.js"></script>
