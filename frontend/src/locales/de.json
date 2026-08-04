@@ -1,0 +1,152 @@
+{
+  "nav": {
+    "services": "Dienstleistungen",
+    "pricing": "Preise & Rechner",
+    "case_studies": "Fallstudien",
+    "about": "Über uns",
+    "portal": "Kundenportal"
+  },
+  "home": {
+    "tagline": "Die Zukunft der automatisierten Skalierung",
+    "title1": "Skalieren Sie Ihre Agentur",
+    "title2": "Ohne mehr Personal einzustellen.",
+    "subtitle": "Wir setzen hochmoderne KI-Infrastruktur ein, um Ihre Inhalte in über 15 Sprachen zu synchronisieren und qualifizierte B2B-Leads vollautomatisch zu generieren. Null Aufwand, massiver ROI.",
+    "btn_primary": "Heute skalieren",
+    "btn_secondary": "Plattform-Demo ansehen",
+    "social_proof": "Vertraut von innovativen Marken weltweit"
+  },
+  "services": {
+    "title": "Maximieren Sie Ihre Reichweite",
+    "subtitle": "Wählen Sie den Motor, der Ihr exponentielles Wachstum vorantreibt.",
+    "dubbing": {
+      "title": "KI-Video-Lokalisierungs-Engine",
+      "desc": "Lassen Sie Sprachbarrieren nicht Ihren Umsatz einschränken. Unsere KI übersetzt nicht nur – sie klont Ihre genaue Stimmfarbe, Betonungen und synchronisiert die Lippenbewegungen in über 15 Sprachen perfekt. Erweitern Sie Ihren adressierbaren Gesamtmarkt über Nacht weltweit.",
+      "feature1": "Makelloses Voice Cloning & Emotionsübertragung",
+      "feature2": "15+ Sprachen mit Deep Lip-Sync Tech",
+      "feature3": "24-Stunden-Durchlauf statt Wochen mit Schauspielern"
+    },
+    "leadgen": {
+      "title": "B2B-Lead-Generierungs-Engine",
+      "desc": "Verschwenden Sie kein Budget mehr für ineffektive Kaltakquise und aufgeblähte Vertriebsteams. Unsere autonomen KI-Agenten scrapen zielgerichtete Daten, erstellen hyperpersonalisierte Multi-Channel-Kampagnen und buchen Meetings direkt in Ihren Kalender. Wir bauen die Pipeline auf, Sie schließen die Deals ab.",
+      "feature1": "Automatisierter Daten-Scraping aus mehreren Quellen",
+      "feature2": "LLM-gesteuerte hyperpersonalisierte E-Mails",
+      "feature3": "Direkte CRM- & Kalenderintegration"
+    }
+  },
+  "pricing": {
+    "title": "Einfache, transparente Preise",
+    "subtitle": "Investieren Sie in automatisierte Systeme, die sich mehrfach amortisieren.",
+    "tab_dubbing": "KI-Synchronisation",
+    "tab_leadgen": "Lead-Generierung",
+    "most_popular": "Am beliebtesten",
+    "btn_primary": "Jetzt loslegen",
+    "btn_secondary": "Vertrieb kontaktieren",
+    "mo": "/Monat",
+    "dubbing": {
+      "starter": {
+        "name": "Starter",
+        "desc": "Für aufstrebende Entwickler, die globale Märkte testen.",
+        "f1": "4 Videos / Monat",
+        "f2": "1 Zielsprache",
+        "f3": "48 Stunden Bearbeitungszeit"
+      },
+      "pro": {
+        "name": "Pro",
+        "desc": "Perfekt für YouTuber und Kursersteller, die skalieren möchten.",
+        "f1": "10 Videos / Monat",
+        "f2": "3 Zielsprachen",
+        "f3": "24 Stunden Bearbeitungszeit"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "desc": "Für Medienunternehmen, die ganze Bibliotheken lokalisieren.",
+        "f1": "30 Videos / Monat",
+        "f2": "Unbegrenzte Sprachen",
+        "f3": "Persönlicher Account-Manager"
+      }
+    },
+    "leadgen": {
+      "launch": {
+        "name": "Launch",
+        "desc": "Füllen Sie Ihren Kalender mit ersten qualifizierten Meetings.",
+        "f1": "200 qualifizierte Leads / Monat",
+        "f2": "Standard-Daten-Scraping",
+        "f3": "Grundlegendes E-Mail-Copywriting"
+      },
+      "scale": {
+        "name": "Scale",
+        "desc": "Für Agenturen und B2B SaaS, die echtes Wachstum wollen.",
+        "f1": "600 qualifizierte Leads / Monat",
+        "f2": "Custom KI-Hyperpersonalisierung",
+        "f3": "Vollständige CRM-Integration"
+      },
+      "dominate": {
+        "name": "Dominate",
+        "desc": "Ein vollständiger Ersatz der Outbound-Sales-Abteilung.",
+        "f1": "2000+ qualifizierte Leads / Monat",
+        "f2": "Omni-Channel (E-Mail + LinkedIn)",
+        "f3": "Wöchentliche Strategieanrufe"
+      }
+    },
+    "calc": {
+      "title": "Rechner für benutzerdefinierte Pläne",
+      "subtitle": "Brauchen Sie etwas Spezifisches? Stellen Sie Ihr eigenes Paket zusammen.",
+      "dubbing_title": "KI-Synchronisationsbedarf",
+      "videos_mo": "Videos pro Monat",
+      "languages": "Sprachen",
+      "leadgen_title": "Bedarf an Lead-Generierung",
+      "leads_mo": "Qualifizierte Leads pro Monat",
+      "est_title": "Geschätzter monatlicher Plan",
+      "btn": "Diesen Plan erstellen"
+    }
+  },
+  "about": {
+    "title": "Über VoxFlow AI",
+    "subtitle": "Gebaut für das moderne Unternehmen, das sich weigert, langsamer zu werden.",
+    "mission_title": "Unsere Mission",
+    "mission_desc": "Wir haben erkannt, dass der größte Engpass für Content-Ersteller und B2B-Agenturen manuelle Arbeit ist. Die Einstellung von Synchronsprechern dauert Wochen. Die Einstellung von SDRs ist teuer, schwer zu verwalten und führt oft zu unvorhersehbaren Ergebnissen. Wir haben VoxFlow AI entwickelt, um diese archaischen Prozesse durch intelligente, automatisierte Systeme zu ersetzen.",
+    "tech_title": "Die Technologie",
+    "tech_desc": "Unsere proprietären Engines nutzen hochmoderne Large Language Models (LLMs), fortschrittliche Sprachsynthese-Architekturen und eine unendlich skalierbare Scraping-Infrastruktur. Was früher ein Team von 10 Personen und wochenlanges Management erforderte, wird heute sofort von der Software ausgeführt."
+  },
+  "case_studies": {
+    "title": "Erfolgsgeschichten von Kunden",
+    "subtitle": "Sehen Sie, wie Agenturen und Entwickler VoxFlow nutzen, um ihren Umsatz zu vervielfachen.",
+    "cs1": {
+      "name": "Horizon Media",
+      "title": "300% ROI in 60 Tagen",
+      "desc": "Horizon wechselte von der manuellen SDR-Ansprache zur KI-Lead-Gen-Engine von VoxFlow. Indem sie menschliche Fehler eliminierten und das Outreach-Volumen mit hyperpersonalisierten Texten drastisch erhöhten, schlossen sie in den ersten zwei Monaten 12 High-Ticket-Kunden ab – ohne einen einzigen zusätzlichen Vertriebsmitarbeiter einzustellen.",
+      "stat1_val": "12",
+      "stat1_lbl": "Neue High-Ticket-Kunden",
+      "stat2_val": "0 €",
+      "stat2_lbl": "Bezahlte SDR-Gehälter"
+    },
+    "cs2": {
+      "name": "TechEdu Creators",
+      "title": "Massive globale Expansion",
+      "desc": "Ein bekannter Tech-Education-Kanal nutzte unsere KI-Synchronisation, um seinen Katalog nahtlos auf Spanisch und Deutsch zu starten. Ihr internationaler Werbeumsatz übertraf ihren englischen Umsatz in nur 4 Monaten.",
+      "stat1_val": "2,5M",
+      "stat1_lbl": "Neue internationale Aufrufe",
+      "stat2_val": "+140%",
+      "stat2_lbl": "AdSense-Umsatz"
+    }
+  },
+  "portal": {
+    "overview": "Übersicht",
+    "dubbing_proj": "Synchronisationsprojekte",
+    "lead_camp": "Lead-Kampagnen",
+    "settings": "Einstellungen",
+    "welcome": "Willkommen zurück, Partner.",
+    "stat1": "Aktive Videos",
+    "stat1_sub": "+2 diese Woche",
+    "stat2": "Generierte Leads",
+    "stat2_sub": "+15% gegenüber dem Vormonat",
+    "stat3": "Nächste Zahlung",
+    "stat3_sub": "Fällig in 14 Tagen",
+    "activity_title": "Letzte Aktivität",
+    "activity_desc": "Wir migrieren diesen Bereich derzeit zu n8n für automatische Systemaktualisierungen in Echtzeit."
+  },
+  "footer": {
+    "tagline": "Automatisierung des Wachstums für das moderne Internet.",
+    "rights": "© 2026 VoxFlow AI. Alle Rechte vorbehalten."
+  }
+}

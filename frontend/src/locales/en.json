@@ -1,0 +1,152 @@
+{
+  "nav": {
+    "services": "Services",
+    "pricing": "Pricing & Calculator",
+    "case_studies": "Case Studies",
+    "about": "About Us",
+    "portal": "Client Portal"
+  },
+  "home": {
+    "tagline": "The Future of Automated Scaling",
+    "title1": "Scale Your Agency",
+    "title2": "Without Hiring More People.",
+    "subtitle": "We deploy cutting-edge AI infrastructure to dub your content into 15+ languages and generate highly qualified B2B leads on absolute autopilot. Zero effort required, massive ROI delivered.",
+    "btn_primary": "Start Scaling Today",
+    "btn_secondary": "View Platform Demo",
+    "social_proof": "Trusted by innovative brands worldwide"
+  },
+  "services": {
+    "title": "Supercharge Your Reach",
+    "subtitle": "Choose the engine that drives your exponential growth.",
+    "dubbing": {
+      "title": "AI Video Localization Engine",
+      "desc": "Don't let language barriers restrict your revenue. Our proprietary AI doesn't just translate—it clones your exact vocal timbre, inflections, and perfectly syncs lip movements in over 15 languages. Expand your total addressable market globally overnight.",
+      "feature1": "Flawless Voice Cloning & Emotion Transfer",
+      "feature2": "15+ Languages with Deep Lip-Sync Tech",
+      "feature3": "24-Hour Turnaround vs. Weeks with Actors"
+    },
+    "leadgen": {
+      "title": "B2B Lead Generation Engine",
+      "desc": "Stop wasting budget on ineffective cold calls and bloated sales teams. Our autonomous AI agents scrape hyper-targeted data, craft hyper-personalized multi-channel outreach campaigns, and book meetings directly into your calendar. We build the pipeline, you close the deals.",
+      "feature1": "Automated Multi-Source Data Scraping",
+      "feature2": "LLM-Powered Hyper-Personalized Emails",
+      "feature3": "Direct CRM & Calendar Integration"
+    }
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Invest in automated systems that pay for themselves multiple times over.",
+    "tab_dubbing": "AI Dubbing",
+    "tab_leadgen": "Lead Generation",
+    "most_popular": "Most Popular",
+    "btn_primary": "Get Started Now",
+    "btn_secondary": "Contact Sales",
+    "mo": "/mo",
+    "dubbing": {
+      "starter": {
+        "name": "Starter",
+        "desc": "For emerging creators testing the global waters.",
+        "f1": "4 Videos / Month",
+        "f2": "1 Target Language",
+        "f3": "48-hour Turnaround"
+      },
+      "pro": {
+        "name": "Pro",
+        "desc": "Perfect for YouTubers & Course Creators aiming for scale.",
+        "f1": "10 Videos / Month",
+        "f2": "3 Target Languages",
+        "f3": "24-hour Turnaround"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "desc": "For media companies localizing entire libraries.",
+        "f1": "30 Videos / Month",
+        "f2": "Unlimited Languages",
+        "f3": "Dedicated Account Manager"
+      }
+    },
+    "leadgen": {
+      "launch": {
+        "name": "Launch",
+        "desc": "Fill your calendar with initial qualified meetings.",
+        "f1": "200 Qualified Leads / mo",
+        "f2": "Standard Data Scraping",
+        "f3": "Basic Email Copywriting"
+      },
+      "scale": {
+        "name": "Scale",
+        "desc": "For Agencies & B2B SaaS wanting serious, predictable growth.",
+        "f1": "600 Qualified Leads / mo",
+        "f2": "Custom AI Hyper-Personalization",
+        "f3": "Full CRM Integration"
+      },
+      "dominate": {
+        "name": "Dominate",
+        "desc": "A full outbound sales department replacement.",
+        "f1": "2000+ Qualified Leads / mo",
+        "f2": "Omni-channel (Email + LinkedIn)",
+        "f3": "Weekly Strategy & Optimization Calls"
+      }
+    },
+    "calc": {
+      "title": "Custom Plan Calculator",
+      "subtitle": "Need something specific? Build your own package and see the estimated cost instantly.",
+      "dubbing_title": "AI Dubbing Needs",
+      "videos_mo": "Videos per month",
+      "languages": "Languages",
+      "leadgen_title": "Lead Generation Needs",
+      "leads_mo": "Qualified Leads per month",
+      "est_title": "Estimated Custom Monthly Plan",
+      "btn": "Build This Plan"
+    }
+  },
+  "about": {
+    "title": "About VoxFlow AI",
+    "subtitle": "Built for the modern business that refuses to slow down.",
+    "mission_title": "Our Mission",
+    "mission_desc": "We realized that the biggest bottleneck for content creators and B2B agencies is manual labor. Hiring voice actors for dubbing takes weeks. Hiring SDRs for outreach is expensive, hard to manage, and often yields unpredictable results. We built VoxFlow AI to replace these archaic processes with intelligent, automated systems. We don't sell software; we sell massive leverage.",
+    "tech_title": "The Technology",
+    "tech_desc": "Our proprietary engines leverage state-of-the-art Large Language Models (LLMs), advanced Voice Synthesis architectures, and infinitely scalable scraping infrastructure. What used to require a team of 10 people and weeks of management is now executed instantly by software."
+  },
+  "case_studies": {
+    "title": "Customer Success Stories",
+    "subtitle": "See how forward-thinking agencies and creators use VoxFlow to multiply their revenue.",
+    "cs1": {
+      "name": "Horizon Media",
+      "title": "300% ROI in 60 Days",
+      "desc": "Horizon transitioned from manual SDR outreach to VoxFlow's AI Lead Gen engine. By eliminating human error and drastically increasing outreach volume with hyper-personalized copy, they closed 12 high-ticket clients in their first two months—without hiring a single additional sales rep.",
+      "stat1_val": "12",
+      "stat1_lbl": "New High-Ticket Clients",
+      "stat2_val": "$0",
+      "stat2_lbl": "SDR Salaries Paid"
+    },
+    "cs2": {
+      "name": "TechEdu Creators",
+      "title": "Massive Global Expansion",
+      "desc": "A prominent tech education channel used our AI dubbing to seamlessly launch their catalog in Spanish and German. Because our system cloned the creator's exact voice, the new channels felt authentic. Their international ad revenue overtook their native English revenue within just 4 months.",
+      "stat1_val": "2.5M",
+      "stat1_lbl": "New International Views",
+      "stat2_val": "+140%",
+      "stat2_lbl": "AdSense Revenue"
+    }
+  },
+  "portal": {
+    "overview": "Overview",
+    "dubbing_proj": "Dubbing Projects",
+    "lead_camp": "Lead Campaigns",
+    "settings": "Settings",
+    "welcome": "Welcome back, Partner.",
+    "stat1": "Active Videos",
+    "stat1_sub": "+2 this week",
+    "stat2": "Leads Generated",
+    "stat2_sub": "+15% vs last month",
+    "stat3": "Next Payment",
+    "stat3_sub": "Due in 14 days",
+    "activity_title": "Recent Activity",
+    "activity_desc": "We are currently migrating this section to n8n for live automated system updates."
+  },
+  "footer": {
+    "tagline": "Automating growth for the modern internet.",
+    "rights": "© 2026 VoxFlow AI. All rights reserved."
+  }
+}

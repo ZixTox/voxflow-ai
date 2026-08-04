@@ -1,228 +1,193 @@
 import { useState } from 'react';
-import { Check, Calculator } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Check, Settings2 } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Pricing() {
+  const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState('dubbing');
-  
-  // Calculator State
-  const [calcVideos, setCalcVideos] = useState(4);
-  const [calcLanguages, setCalcLanguages] = useState(2);
-  const [calcLeads, setCalcLeads] = useState(500);
-  
-  // Simple pricing logic for the calculator
-  const dubbingPrice = (calcVideos * 100) + (calcLanguages * 50);
-  const leadPrice = Math.floor(calcLeads * 1.5); // $1.50 per lead
+  const [videosPerMonth, setVideosPerMonth] = useState(4);
+  const [languages, setLanguages] = useState(1);
+  const [leadsPerMonth, setLeadsPerMonth] = useState(200);
+
+  const calculateCustomPrice = () => {
+    if (activeTab === 'dubbing') {
+      return (videosPerMonth * 150) + (languages * 50);
+    } else {
+      return leadsPerMonth * 1.5;
+    }
+  };
 
   return (
     <div className="container">
-      <div className="section-header page-section" style={{ paddingBottom: '2rem' }}>
-        <h2>Simple, Transparent Pricing</h2>
-        <p>Invest in automated systems that pay for themselves.</p>
+      <div className="section-header page-section">
+        <h2>{t('pricing.title')}</h2>
+        <p>{t('pricing.subtitle')}</p>
       </div>
 
-      {/* Toggle */}
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '3rem' }}>
-        <div style={{ display: 'inline-flex', background: 'var(--bg-card)', border: '1px solid var(--glass-border)', borderRadius: '999px', padding: '0.25rem' }}>
+        <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '12px', display: 'flex', gap: '0.5rem', border: '1px solid var(--glass-border)' }}>
           <button 
+            className={`btn ${activeTab === 'dubbing' ? 'btn-primary' : ''}`}
+            style={{ background: activeTab === 'dubbing' ? '' : 'transparent', color: activeTab === 'dubbing' ? '' : 'var(--text-muted)' }}
             onClick={() => setActiveTab('dubbing')}
-            style={{ padding: '0.75rem 2rem', borderRadius: '999px', border: 'none', background: activeTab === 'dubbing' ? 'var(--accent-primary)' : 'transparent', color: activeTab === 'dubbing' ? '#fff' : 'var(--text-muted)', fontWeight: 600, cursor: 'pointer', transition: 'all 0.2s' }}
           >
-            AI Dubbing
+            {t('pricing.tab_dubbing')}
           </button>
           <button 
+            className={`btn ${activeTab === 'leadgen' ? 'btn-primary' : ''}`}
+            style={{ background: activeTab === 'leadgen' ? '' : 'transparent', color: activeTab === 'leadgen' ? '' : 'var(--text-muted)' }}
             onClick={() => setActiveTab('leadgen')}
-            style={{ padding: '0.75rem 2rem', borderRadius: '999px', border: 'none', background: activeTab === 'leadgen' ? 'var(--accent-secondary)' : 'transparent', color: activeTab === 'leadgen' ? '#fff' : 'var(--text-muted)', fontWeight: 600, cursor: 'pointer', transition: 'all 0.2s' }}
           >
-            Lead Generation
+            {t('pricing.tab_leadgen')}
           </button>
         </div>
       </div>
 
-      {/* Pricing Cards */}
-      {activeTab === 'dubbing' ? (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', maxWidth: '1100px', margin: '0 auto 4rem' }}>
-          
-          <div className="glass-card">
-            <h3 style={{ fontSize: '1.5rem', color: 'var(--text-muted)' }}>Starter</h3>
-            <div style={{ fontSize: '3.5rem', fontFamily: 'Outfit', fontWeight: 900, margin: '1rem 0', lineHeight: 1 }}>
-              $499<span style={{ fontSize: '1.2rem', fontWeight: 500, color: 'var(--text-muted)' }}>/mo</span>
-            </div>
-            <p style={{ color: 'var(--text-muted)', marginBottom: '2rem', minHeight: '50px' }}>
-              For emerging creators testing global waters.
-            </p>
-            <Link to="/portal" className="btn btn-secondary" style={{ width: '100%', marginBottom: '2rem' }}>Choose Starter</Link>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Check size={20} color="var(--accent-primary)"/> 4 Videos / Month</li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Check size={20} color="var(--accent-primary)"/> 1 Language</li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Check size={20} color="var(--accent-primary)"/> 48-hour Turnaround</li>
-            </ul>
-          </div>
-
-          <div className="glass-card" style={{ background: 'linear-gradient(180deg, rgba(59,130,246,0.1) 0%, rgba(255,255,255,0.03) 100%)', borderColor: 'rgba(59,130,246,0.3)', position: 'relative', transform: 'scale(1.05)' }}>
-            <div style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'var(--accent-primary)', color: '#fff', fontSize: '0.75rem', fontWeight: 700, padding: '0.25rem 0.75rem', borderRadius: '999px', textTransform: 'uppercase' }}>
-              Most Popular
-            </div>
-            <h3 style={{ fontSize: '1.5rem', color: 'var(--text-main)' }}>Pro</h3>
-            <div style={{ fontSize: '3.5rem', fontFamily: 'Outfit', fontWeight: 900, margin: '1rem 0', lineHeight: 1 }}>
-              $999<span style={{ fontSize: '1.2rem', fontWeight: 500, color: 'var(--text-muted)' }}>/mo</span>
-            </div>
-            <p style={{ color: 'var(--text-muted)', marginBottom: '2rem', minHeight: '50px' }}>
-              Perfect for YouTubers & Course Creators.
-            </p>
-            <Link to="/portal" className="btn btn-primary" style={{ width: '100%', marginBottom: '2rem' }}>Choose Pro</Link>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Check size={20} color="var(--accent-primary)"/> 10 Videos / Month</li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Check size={20} color="var(--accent-primary)"/> 3 Languages</li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Check size={20} color="var(--accent-primary)"/> 24-hour Turnaround</li>
-            </ul>
-          </div>
-
-          <div className="glass-card">
-            <h3 style={{ fontSize: '1.5rem', color: 'var(--text-muted)' }}>Enterprise</h3>
-            <div style={{ fontSize: '3.5rem', fontFamily: 'Outfit', fontWeight: 900, margin: '1rem 0', lineHeight: 1 }}>
-              $2,499<span style={{ fontSize: '1.2rem', fontWeight: 500, color: 'var(--text-muted)' }}>/mo</span>
-            </div>
-            <p style={{ color: 'var(--text-muted)', marginBottom: '2rem', minHeight: '50px' }}>
-              For media companies localizing everything.
-            </p>
-            <Link to="/portal" className="btn btn-secondary" style={{ width: '100%', marginBottom: '2rem' }}>Contact Sales</Link>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Check size={20} color="var(--accent-primary)"/> 30 Videos / Month</li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Check size={20} color="var(--accent-primary)"/> Unlimited Languages</li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Check size={20} color="var(--accent-primary)"/> Dedicated Manager</li>
-            </ul>
-          </div>
-
-        </div>
-      ) : (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', maxWidth: '1100px', margin: '0 auto 4rem' }}>
-          
-          <div className="glass-card">
-            <h3 style={{ fontSize: '1.5rem', color: 'var(--text-muted)' }}>Launch</h3>
-            <div style={{ fontSize: '3.5rem', fontFamily: 'Outfit', fontWeight: 900, margin: '1rem 0', lineHeight: 1 }}>
-              $799<span style={{ fontSize: '1.2rem', fontWeight: 500, color: 'var(--text-muted)' }}>/mo</span>
-            </div>
-            <p style={{ color: 'var(--text-muted)', marginBottom: '2rem', minHeight: '50px' }}>
-              Fill your calendar with initial meetings.
-            </p>
-            <Link to="/portal" className="btn btn-secondary" style={{ width: '100%', marginBottom: '2rem' }}>Choose Launch</Link>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Check size={20} color="var(--accent-secondary)"/> 200 Qualified Leads</li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Check size={20} color="var(--accent-secondary)"/> Standard Scraping</li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Check size={20} color="var(--accent-secondary)"/> Basic Email Copy</li>
-            </ul>
-          </div>
-
-          <div className="glass-card" style={{ background: 'linear-gradient(180deg, rgba(139,92,246,0.1) 0%, rgba(255,255,255,0.03) 100%)', borderColor: 'rgba(139,92,246,0.3)', position: 'relative', transform: 'scale(1.05)' }}>
-            <div style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'var(--accent-secondary)', color: '#fff', fontSize: '0.75rem', fontWeight: 700, padding: '0.25rem 0.75rem', borderRadius: '999px', textTransform: 'uppercase' }}>
-              Most Popular
-            </div>
-            <h3 style={{ fontSize: '1.5rem', color: 'var(--text-main)' }}>Scale</h3>
-            <div style={{ fontSize: '3.5rem', fontFamily: 'Outfit', fontWeight: 900, margin: '1rem 0', lineHeight: 1 }}>
-              $1,499<span style={{ fontSize: '1.2rem', fontWeight: 500, color: 'var(--text-muted)' }}>/mo</span>
-            </div>
-            <p style={{ color: 'var(--text-muted)', marginBottom: '2rem', minHeight: '50px' }}>
-              For Agencies & B2B SaaS wanting serious growth.
-            </p>
-            <Link to="/portal" className="btn btn-primary" style={{ width: '100%', marginBottom: '2rem', background: 'var(--accent-secondary)', color: '#fff' }}>Choose Scale</Link>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Check size={20} color="var(--accent-secondary)"/> 600 Qualified Leads</li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Check size={20} color="var(--accent-secondary)"/> Custom AI Hyper-Personalization</li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Check size={20} color="var(--accent-secondary)"/> CRM Integration</li>
-            </ul>
-          </div>
-
-          <div className="glass-card">
-            <h3 style={{ fontSize: '1.5rem', color: 'var(--text-muted)' }}>Dominate</h3>
-            <div style={{ fontSize: '3.5rem', fontFamily: 'Outfit', fontWeight: 900, margin: '1rem 0', lineHeight: 1 }}>
-              $3,999<span style={{ fontSize: '1.2rem', fontWeight: 500, color: 'var(--text-muted)' }}>/mo</span>
-            </div>
-            <p style={{ color: 'var(--text-muted)', marginBottom: '2rem', minHeight: '50px' }}>
-              Full outbound sales department replacement.
-            </p>
-            <Link to="/portal" className="btn btn-secondary" style={{ width: '100%', marginBottom: '2rem' }}>Contact Sales</Link>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Check size={20} color="var(--accent-secondary)"/> 2000+ Qualified Leads</li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Check size={20} color="var(--accent-secondary)"/> Omni-channel (Email + LinkedIn)</li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Check size={20} color="var(--accent-secondary)"/> Weekly Strategy Calls</li>
-            </ul>
-          </div>
-
-        </div>
-      )}
+      <div className="grid" style={{ marginBottom: '5rem' }}>
+        {activeTab === 'dubbing' ? (
+          <>
+            <PricingCard 
+              name={t('pricing.dubbing.starter.name')}
+              price="$599" 
+              desc={t('pricing.dubbing.starter.desc')}
+              features={[t('pricing.dubbing.starter.f1'), t('pricing.dubbing.starter.f2'), t('pricing.dubbing.starter.f3')]}
+              t={t}
+            />
+            <PricingCard 
+              name={t('pricing.dubbing.pro.name')}
+              price="$1,299" 
+              desc={t('pricing.dubbing.pro.desc')}
+              features={[t('pricing.dubbing.pro.f1'), t('pricing.dubbing.pro.f2'), t('pricing.dubbing.pro.f3')]} 
+              isPopular 
+              t={t}
+            />
+            <PricingCard 
+              name={t('pricing.dubbing.enterprise.name')}
+              price="$3,499" 
+              desc={t('pricing.dubbing.enterprise.desc')}
+              features={[t('pricing.dubbing.enterprise.f1'), t('pricing.dubbing.enterprise.f2'), t('pricing.dubbing.enterprise.f3')]}
+              t={t}
+            />
+          </>
+        ) : (
+          <>
+            <PricingCard 
+              name={t('pricing.leadgen.launch.name')}
+              price="$399" 
+              desc={t('pricing.leadgen.launch.desc')}
+              features={[t('pricing.leadgen.launch.f1'), t('pricing.leadgen.launch.f2'), t('pricing.leadgen.launch.f3')]}
+              t={t}
+            />
+            <PricingCard 
+              name={t('pricing.leadgen.scale.name')}
+              price="$899" 
+              desc={t('pricing.leadgen.scale.desc')}
+              features={[t('pricing.leadgen.scale.f1'), t('pricing.leadgen.scale.f2'), t('pricing.leadgen.scale.f3')]} 
+              isPopular 
+              t={t}
+            />
+            <PricingCard 
+              name={t('pricing.leadgen.dominate.name')}
+              price="$2,499" 
+              desc={t('pricing.leadgen.dominate.desc')}
+              features={[t('pricing.leadgen.dominate.f1'), t('pricing.leadgen.dominate.f2'), t('pricing.leadgen.dominate.f3')]}
+              t={t}
+            />
+          </>
+        )}
+      </div>
 
       {/* Calculator Section */}
       <div className="glass-card" style={{ maxWidth: '800px', margin: '0 auto 4rem', padding: '3rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem', borderBottom: '1px solid var(--glass-border)', paddingBottom: '1.5rem' }}>
-          <Calculator size={32} color="var(--accent-primary)" />
-          <h2 style={{ fontSize: '2rem', margin: 0 }}>Custom Plan Calculator</h2>
+        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <Settings2 size={32} style={{ color: 'var(--brand-primary)', marginBottom: '1rem' }} />
+          <h3>{t('pricing.calc.title')}</h3>
+          <p style={{ color: 'var(--text-muted)' }}>{t('pricing.calc.subtitle')}</p>
         </div>
-        
-        <p style={{ color: 'var(--text-muted)', marginBottom: '3rem' }}>Need something specific? Build your own package and see the estimated cost instantly.</p>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
-          
-          {/* Dubbing Calc */}
-          <div>
-            <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--text-main)' }}>AI Dubbing Needs</h4>
-            
-            <div style={{ marginBottom: '1.5rem' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                <span>Videos per month</span>
-                <span style={{ fontWeight: 700, color: 'var(--accent-primary)' }}>{calcVideos}</span>
-              </div>
-              <input 
-                type="range" min="0" max="50" value={calcVideos} 
-                onChange={(e) => setCalcVideos(Number(e.target.value))}
-                style={{ width: '100%', cursor: 'pointer' }}
-              />
-            </div>
-            
+        {activeTab === 'dubbing' ? (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
             <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                <span>Languages</span>
-                <span style={{ fontWeight: 700, color: 'var(--accent-primary)' }}>{calcLanguages}</span>
-              </div>
+              <label style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                <span>{t('pricing.calc.videos_mo')}</span>
+                <span style={{ fontWeight: 'bold' }}>{videosPerMonth}</span>
+              </label>
               <input 
-                type="range" min="0" max="15" value={calcLanguages} 
-                onChange={(e) => setCalcLanguages(Number(e.target.value))}
-                style={{ width: '100%', cursor: 'pointer' }}
+                type="range" 
+                min="1" max="100" 
+                value={videosPerMonth} 
+                onChange={(e) => setVideosPerMonth(parseInt(e.target.value))}
+                style={{ width: '100%' }}
               />
             </div>
-          </div>
-
-          {/* Lead Gen Calc */}
-          <div style={{ borderTop: '1px solid var(--glass-border)', paddingTop: '2.5rem' }}>
-            <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--text-main)' }}>Lead Generation Needs</h4>
-            
             <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                <span>Qualified Leads per month</span>
-                <span style={{ fontWeight: 700, color: 'var(--accent-secondary)' }}>{calcLeads}</span>
-              </div>
+              <label style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                <span>{t('pricing.calc.languages')}</span>
+                <span style={{ fontWeight: 'bold' }}>{languages}</span>
+              </label>
               <input 
-                type="range" min="0" max="5000" step="100" value={calcLeads} 
-                onChange={(e) => setCalcLeads(Number(e.target.value))}
-                style={{ width: '100%', cursor: 'pointer' }}
+                type="range" 
+                min="1" max="15" 
+                value={languages} 
+                onChange={(e) => setLanguages(parseInt(e.target.value))}
+                style={{ width: '100%' }}
               />
             </div>
           </div>
-
-          {/* Total */}
-          <div style={{ background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '16px', marginTop: '1rem', textAlign: 'center', border: '1px solid var(--glass-border)' }}>
-            <div style={{ fontSize: '1rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '0.5rem' }}>Estimated Custom Monthly Plan</div>
-            <div style={{ fontSize: '4rem', fontFamily: 'Outfit', fontWeight: 900, color: 'var(--text-main)', lineHeight: 1, marginBottom: '1.5rem' }}>
-              ${dubbingPrice + leadPrice}
+        ) : (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+            <div>
+              <label style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                <span>{t('pricing.calc.leads_mo')}</span>
+                <span style={{ fontWeight: 'bold' }}>{leadsPerMonth}</span>
+              </label>
+              <input 
+                type="range" 
+                min="100" max="5000" step="100"
+                value={leadsPerMonth} 
+                onChange={(e) => setLeadsPerMonth(parseInt(e.target.value))}
+                style={{ width: '100%' }}
+              />
             </div>
-            <Link to="/portal" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.1rem' }}>
-              Build This Plan
-            </Link>
           </div>
+        )}
 
+        <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid var(--glass-border)', textAlign: 'center' }}>
+          <p style={{ color: 'var(--text-muted)', marginBottom: '0.5rem' }}>{t('pricing.calc.est_title')}</p>
+          <div style={{ fontSize: '3rem', fontWeight: 900, marginBottom: '1.5rem', fontFamily: 'Outfit' }}>
+            ${calculateCustomPrice().toLocaleString()} <span style={{ fontSize: '1rem', color: 'var(--text-muted)' }}>{t('pricing.mo')}</span>
+          </div>
+          <button className="btn btn-primary" style={{ width: '100%' }}>{t('pricing.calc.btn')}</button>
         </div>
       </div>
+    </div>
+  );
+}
 
+function PricingCard({ name, price, desc, features, isPopular, t }) {
+  return (
+    <div className="glass-card" style={{ position: 'relative', border: isPopular ? '1px solid var(--brand-primary)' : '' }}>
+      {isPopular && (
+        <div style={{ position: 'absolute', top: '-12px', left: '50%', transform: 'translateX(-50%)', background: 'var(--brand-primary)', color: '#fff', padding: '4px 12px', borderRadius: '999px', fontSize: '0.75rem', fontWeight: 'bold' }}>
+          {t('pricing.most_popular')}
+        </div>
+      )}
+      <h3 style={{ fontSize: '1.5rem' }}>{name}</h3>
+      <p style={{ color: 'var(--text-muted)', minHeight: '48px', marginTop: '0.5rem', fontSize: '0.9rem' }}>{desc}</p>
+      <div style={{ fontSize: '2.5rem', fontWeight: 900, margin: '1.5rem 0', fontFamily: 'Outfit' }}>
+        {price}<span style={{ fontSize: '1rem', color: 'var(--text-muted)', fontWeight: 400 }}>{t('pricing.mo')}</span>
+      </div>
+      <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+        {features.map((f, i) => (
+          <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+            <Check size={20} color="var(--brand-primary)" style={{ flexShrink: 0 }} />
+            <span style={{ fontSize: '0.95rem' }}>{f}</span>
+          </li>
+        ))}
+      </ul>
+      <button className={`btn ${isPopular ? 'btn-primary' : ''}`} style={{ width: '100%', background: isPopular ? '' : 'rgba(255,255,255,0.05)' }}>
+        {isPopular ? t('pricing.btn_primary') : t('pricing.btn_secondary')}
+      </button>
     </div>
   );
 }

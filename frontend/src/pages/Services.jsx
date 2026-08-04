@@ -1,47 +1,58 @@
-import { Mic2, Users, Bot, Globe2 } from 'lucide-react';
+import { Mic, Target, Zap, Globe, MessageSquare, Briefcase } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Services() {
+  const { t } = useLanguage();
+
   return (
     <div className="container">
       <div className="section-header page-section">
-        <h2>Supercharge Your Reach</h2>
-        <p>Choose the engine that drives your growth.</p>
+        <h2>{t('services.title')}</h2>
+        <p>{t('services.subtitle')}</p>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem' }}>
-        
-        {/* Dubbing Service */}
-        <div className="glass-card" style={{ position: 'relative' }}>
-          <div style={{ background: 'rgba(59,130,246,0.1)', width: '60px', height: '60px', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '2rem', color: 'var(--accent-primary)' }}>
-            <Mic2 size={32} />
+      <div className="grid">
+        <div className="glass-card feature-card">
+          <div className="feature-icon" style={{ background: 'rgba(56, 189, 248, 0.1)', color: '#38bdf8' }}>
+            <Mic size={24} />
           </div>
-          <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>AI Video Localization</h3>
-          <p style={{ color: 'var(--text-muted)', marginBottom: '2rem' }}>
-            Don't let language barriers limit your revenue. We clone your exact voice, translate your content, and perfectly sync lip movements in 15+ languages.
+          <h3 style={{ fontSize: '1.5rem' }}>{t('services.dubbing.title')}</h3>
+          <p style={{ marginTop: '1rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>
+            {t('services.dubbing.desc')}
           </p>
-          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Globe2 size={20} color="var(--accent-primary)"/> Perfect Voice Cloning</li>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Globe2 size={20} color="var(--accent-primary)"/> 15+ Supported Languages</li>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Globe2 size={20} color="var(--accent-primary)"/> 24-Hour Turnaround</li>
+          <ul style={{ marginTop: '1.5rem', listStyle: 'none', padding: 0 }}>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem', color: '#cbd5e1' }}>
+              <Zap size={16} color="#38bdf8" /> {t('services.dubbing.feature1')}
+            </li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem', color: '#cbd5e1' }}>
+              <Globe size={16} color="#38bdf8" /> {t('services.dubbing.feature2')}
+            </li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#cbd5e1' }}>
+              <Briefcase size={16} color="#38bdf8" /> {t('services.dubbing.feature3')}
+            </li>
           </ul>
         </div>
 
-        {/* Lead Gen Service */}
-        <div className="glass-card" style={{ position: 'relative' }}>
-          <div style={{ background: 'rgba(139,92,246,0.1)', width: '60px', height: '60px', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '2rem', color: 'var(--accent-secondary)' }}>
-            <Users size={32} />
+        <div className="glass-card feature-card">
+          <div className="feature-icon" style={{ background: 'rgba(168, 85, 247, 0.1)', color: '#a855f7' }}>
+            <Target size={24} />
           </div>
-          <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>B2B Lead Generation</h3>
-          <p style={{ color: 'var(--text-muted)', marginBottom: '2rem' }}>
-            Stop wasting time on cold calls. Our AI agents scrape hyper-targeted leads and run personalized outreach campaigns that actually convert into meetings.
+          <h3 style={{ fontSize: '1.5rem' }}>{t('services.leadgen.title')}</h3>
+          <p style={{ marginTop: '1rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>
+            {t('services.leadgen.desc')}
           </p>
-          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Bot size={20} color="var(--accent-secondary)"/> Automated Data Scraping</li>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Bot size={20} color="var(--accent-secondary)"/> AI Personalized Emails</li>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><Bot size={20} color="var(--accent-secondary)"/> CRM Integration</li>
+          <ul style={{ marginTop: '1.5rem', listStyle: 'none', padding: 0 }}>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem', color: '#cbd5e1' }}>
+              <Zap size={16} color="#a855f7" /> {t('services.leadgen.feature1')}
+            </li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem', color: '#cbd5e1' }}>
+              <MessageSquare size={16} color="#a855f7" /> {t('services.leadgen.feature2')}
+            </li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#cbd5e1' }}>
+              <Briefcase size={16} color="#a855f7" /> {t('services.leadgen.feature3')}
+            </li>
           </ul>
         </div>
-
       </div>
     </div>
   );

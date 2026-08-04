@@ -1,55 +1,57 @@
 import { LayoutDashboard, Video, Users, Settings } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Portal() {
+  const { t } = useLanguage();
+
   return (
-    <div style={{ display: 'flex', minHeight: '80vh', borderTop: '1px solid var(--glass-border)' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: '250px 1fr', minHeight: 'calc(100vh - 80px)' }}>
       {/* Sidebar */}
-      <div style={{ width: '250px', borderRight: '1px solid var(--glass-border)', padding: '2rem' }}>
-        <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-main)', fontWeight: 600, padding: '0.75rem', background: 'var(--glass-border)', borderRadius: '8px' }}>
-            <LayoutDashboard size={20} /> Overview
-          </li>
-          <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-muted)', padding: '0.75rem', cursor: 'pointer' }}>
-            <Video size={20} /> Dubbing Projects
-          </li>
-          <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-muted)', padding: '0.75rem', cursor: 'pointer' }}>
-            <Users size={20} /> Lead Campaigns
-          </li>
-          <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-muted)', padding: '0.75rem', cursor: 'pointer' }}>
-            <Settings size={20} /> Settings
-          </li>
-        </ul>
+      <div style={{ borderRight: '1px solid var(--glass-border)', padding: '2rem' }}>
+        <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '1.5rem' }}>Menu</div>
+        <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+          <a href="#" className="portal-nav-link active" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.75rem 1rem', borderRadius: '8px', color: '#fff', background: 'rgba(255,255,255,0.1)', textDecoration: 'none' }}>
+            <LayoutDashboard size={18} /> {t('portal.overview')}
+          </a>
+          <a href="#" className="portal-nav-link" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.75rem 1rem', borderRadius: '8px', color: 'var(--text-muted)', textDecoration: 'none' }}>
+            <Video size={18} /> {t('portal.dubbing_proj')}
+          </a>
+          <a href="#" className="portal-nav-link" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.75rem 1rem', borderRadius: '8px', color: 'var(--text-muted)', textDecoration: 'none' }}>
+            <Users size={18} /> {t('portal.lead_camp')}
+          </a>
+          <a href="#" className="portal-nav-link" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.75rem 1rem', borderRadius: '8px', color: 'var(--text-muted)', textDecoration: 'none' }}>
+            <Settings size={18} /> {t('portal.settings')}
+          </a>
+        </nav>
       </div>
 
       {/* Main Content */}
-      <div style={{ flex: 1, padding: '3rem' }}>
-        <h2 style={{ fontSize: '2rem', marginBottom: '2rem' }}>Welcome back, Partner.</h2>
+      <div style={{ padding: '2rem 3rem' }}>
+        <h2 style={{ fontSize: '2rem', marginBottom: '2rem' }}>{t('portal.welcome')}</h2>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
-          
+        <div className="grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)', marginBottom: '3rem' }}>
           <div className="glass-card" style={{ padding: '1.5rem' }}>
-            <h4 style={{ color: 'var(--text-muted)', marginBottom: '0.5rem' }}>Active Videos</h4>
-            <div style={{ fontSize: '2.5rem', fontFamily: 'Outfit', fontWeight: 700 }}>4</div>
-            <p style={{ color: 'var(--accent-primary)', fontSize: '0.85rem' }}>+2 this week</p>
+            <div style={{ color: 'var(--text-muted)', marginBottom: '0.5rem' }}>{t('portal.stat1')}</div>
+            <div style={{ fontSize: '2rem', fontWeight: 'bold' }}>14</div>
+            <div style={{ color: '#10b981', fontSize: '0.85rem', marginTop: '0.5rem' }}>{t('portal.stat1_sub')}</div>
           </div>
-          
           <div className="glass-card" style={{ padding: '1.5rem' }}>
-            <h4 style={{ color: 'var(--text-muted)', marginBottom: '0.5rem' }}>Leads Generated</h4>
-            <div style={{ fontSize: '2.5rem', fontFamily: 'Outfit', fontWeight: 700 }}>128</div>
-            <p style={{ color: 'var(--accent-secondary)', fontSize: '0.85rem' }}>+15% vs last month</p>
+            <div style={{ color: 'var(--text-muted)', marginBottom: '0.5rem' }}>{t('portal.stat2')}</div>
+            <div style={{ fontSize: '2rem', fontWeight: 'bold' }}>1,248</div>
+            <div style={{ color: '#10b981', fontSize: '0.85rem', marginTop: '0.5rem' }}>{t('portal.stat2_sub')}</div>
           </div>
-          
           <div className="glass-card" style={{ padding: '1.5rem' }}>
-            <h4 style={{ color: 'var(--text-muted)', marginBottom: '0.5rem' }}>Next Payment</h4>
-            <div style={{ fontSize: '2.5rem', fontFamily: 'Outfit', fontWeight: 700 }}>$1,299</div>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Due in 14 days</p>
+            <div style={{ color: 'var(--text-muted)', marginBottom: '0.5rem' }}>{t('portal.stat3')}</div>
+            <div style={{ fontSize: '2rem', fontWeight: 'bold' }}>$3,499</div>
+            <div style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '0.5rem' }}>{t('portal.stat3_sub')}</div>
           </div>
-
         </div>
 
-        <div className="glass-card">
-          <h3 style={{ marginBottom: '1.5rem' }}>Recent Activity</h3>
-          <p style={{ color: 'var(--text-muted)' }}>We are currently migrating this section to n8n for live automated updates.</p>
+        <div className="glass-card" style={{ padding: '2rem' }}>
+          <h3>{t('portal.activity_title')}</h3>
+          <p style={{ color: 'var(--text-muted)', marginTop: '1rem' }}>
+            {t('portal.activity_desc')}
+          </p>
         </div>
       </div>
     </div>

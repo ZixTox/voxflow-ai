@@ -1,0 +1,152 @@
+{
+  "nav": {
+    "services": "Servicios",
+    "pricing": "Precios y Calculadora",
+    "case_studies": "Casos de Éxito",
+    "about": "Sobre Nosotros",
+    "portal": "Portal del Cliente"
+  },
+  "home": {
+    "tagline": "El futuro del escalado automatizado",
+    "title1": "Escala tu Agencia",
+    "title2": "Sin contratar a más personas.",
+    "subtitle": "Desplegamos infraestructura de IA de vanguardia para doblar tu contenido a más de 15 idiomas y generar leads B2B altamente cualificados en piloto automático absoluto. Cero esfuerzo, ROI masivo.",
+    "btn_primary": "Comienza a escalar hoy",
+    "btn_secondary": "Ver demostración",
+    "social_proof": "Con la confianza de marcas innovadoras en todo el mundo"
+  },
+  "services": {
+    "title": "Potencia tu alcance",
+    "subtitle": "Elige el motor que impulse tu crecimiento exponencial.",
+    "dubbing": {
+      "title": "Motor de Localización de Video con IA",
+      "desc": "No dejes que las barreras del idioma restrinjan tus ingresos. Nuestra IA patentada no solo traduce: clona tu timbre vocal exacto, tus inflexiones y sincroniza perfectamente los movimientos de los labios en más de 15 idiomas. Expande tu mercado objetivo a nivel mundial de la noche a la mañana.",
+      "feature1": "Clonación de voz impecable y transferencia de emociones",
+      "feature2": "Más de 15 idiomas con tecnología Deep Lip-Sync",
+      "feature3": "Entrega en 24 horas en lugar de semanas con actores"
+    },
+    "leadgen": {
+      "title": "Motor de Generación de Leads B2B",
+      "desc": "Deja de desperdiciar presupuesto en llamadas en frío ineficaces y equipos de ventas inflados. Nuestros agentes de IA autónomos extraen datos hiper-segmentados, crean campañas de divulgación multicanal hiper-personalizadas y programan reuniones directamente en tu calendario. Nosotros construimos el embudo, tú cierras los tratos.",
+      "feature1": "Extracción automatizada de datos de múltiples fuentes",
+      "feature2": "Correos electrónicos hiper-personalizados impulsados por LLM",
+      "feature3": "Integración directa con CRM y calendario"
+    }
+  },
+  "pricing": {
+    "title": "Precios simples y transparentes",
+    "subtitle": "Invierte en sistemas automatizados que se pagan por sí solos varias veces.",
+    "tab_dubbing": "Doblaje con IA",
+    "tab_leadgen": "Generación de Leads",
+    "most_popular": "Más Popular",
+    "btn_primary": "Empezar Ahora",
+    "btn_secondary": "Contactar Ventas",
+    "mo": "/mes",
+    "dubbing": {
+      "starter": {
+        "name": "Starter",
+        "desc": "Para creadores emergentes que prueban mercados globales.",
+        "f1": "4 Videos / Mes",
+        "f2": "1 Idioma Objetivo",
+        "f3": "Entrega en 48 horas"
+      },
+      "pro": {
+        "name": "Pro",
+        "desc": "Perfecto para YouTubers y creadores de cursos que buscan escalar.",
+        "f1": "10 Videos / Mes",
+        "f2": "3 Idiomas Objetivo",
+        "f3": "Entrega en 24 horas"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "desc": "Para empresas de medios que localizan bibliotecas enteras.",
+        "f1": "30 Videos / Mes",
+        "f2": "Idiomas Ilimitados",
+        "f3": "Gerente de Cuenta Dedicado"
+      }
+    },
+    "leadgen": {
+      "launch": {
+        "name": "Launch",
+        "desc": "Llena tu calendario con las primeras reuniones calificadas.",
+        "f1": "200 Leads Calificados / mes",
+        "f2": "Extracción de Datos Estándar",
+        "f3": "Redacción de Correos Básica"
+      },
+      "scale": {
+        "name": "Scale",
+        "desc": "Para Agencias y B2B SaaS que desean un crecimiento serio y predecible.",
+        "f1": "600 Leads Calificados / mes",
+        "f2": "Hiper-personalización de IA personalizada",
+        "f3": "Integración Completa de CRM"
+      },
+      "dominate": {
+        "name": "Dominate",
+        "desc": "Un reemplazo completo del departamento de ventas salientes.",
+        "f1": "Más de 2000 Leads Calificados / mes",
+        "f2": "Omnicanal (Correo + LinkedIn)",
+        "f3": "Llamadas de Estrategia Semanales"
+      }
+    },
+    "calc": {
+      "title": "Calculadora de Plan Personalizado",
+      "subtitle": "¿Necesitas algo específico? Construye tu propio paquete y ve el costo estimado al instante.",
+      "dubbing_title": "Necesidades de Doblaje con IA",
+      "videos_mo": "Videos por mes",
+      "languages": "Idiomas",
+      "leadgen_title": "Necesidades de Generación de Leads",
+      "leads_mo": "Leads Calificados por mes",
+      "est_title": "Plan Mensual Personalizado Estimado",
+      "btn": "Construir Este Plan"
+    }
+  },
+  "about": {
+    "title": "Sobre VoxFlow AI",
+    "subtitle": "Construido para la empresa moderna que se niega a frenar.",
+    "mission_title": "Nuestra Misión",
+    "mission_desc": "Nos dimos cuenta de que el mayor cuello de botella para los creadores de contenido y las agencias B2B es el trabajo manual. Contratar actores de voz para doblaje lleva semanas. Contratar SDRs para la divulgación es costoso, difícil de manejar y a menudo produce resultados impredecibles. Construimos VoxFlow AI para reemplazar estos procesos arcaicos con sistemas inteligentes y automatizados. No vendemos software; vendemos apalancamiento masivo.",
+    "tech_title": "La Tecnología",
+    "tech_desc": "Nuestros motores patentados aprovechan los modelos de lenguaje grande (LLM) de última generación, arquitecturas avanzadas de síntesis de voz e infraestructura de extracción infinitamente escalable. Lo que antes requería un equipo de 10 personas y semanas de gestión, ahora el software lo ejecuta instantáneamente."
+  },
+  "case_studies": {
+    "title": "Historias de Éxito de Clientes",
+    "subtitle": "Ve cómo las agencias y creadores con visión de futuro utilizan VoxFlow para multiplicar sus ingresos.",
+    "cs1": {
+      "name": "Horizon Media",
+      "title": "300% de ROI en 60 días",
+      "desc": "Horizon pasó del alcance manual de SDR al motor de generación de leads con IA de VoxFlow. Al eliminar el error humano y aumentar drásticamente el volumen de alcance con textos hiper-personalizados, cerraron 12 clientes de alto valor en sus primeros dos meses, sin contratar a un solo representante de ventas adicional.",
+      "stat1_val": "12",
+      "stat1_lbl": "Nuevos Clientes de Alto Valor",
+      "stat2_val": "$0",
+      "stat2_lbl": "Salarios de SDR Pagados"
+    },
+    "cs2": {
+      "name": "TechEdu Creators",
+      "title": "Expansión Global Masiva",
+      "desc": "Un destacado canal de educación tecnológica utilizó nuestro doblaje con IA para lanzar sin problemas su catálogo en español y alemán. Dado que nuestro sistema clonó la voz exacta del creador, los nuevos canales se sintieron auténticos. Sus ingresos internacionales por publicidad superaron a sus ingresos nativos en inglés en solo 4 meses.",
+      "stat1_val": "2.5M",
+      "stat1_lbl": "Nuevas Vistas Internacionales",
+      "stat2_val": "+140%",
+      "stat2_lbl": "Ingresos por AdSense"
+    }
+  },
+  "portal": {
+    "overview": "Visión General",
+    "dubbing_proj": "Proyectos de Doblaje",
+    "lead_camp": "Campañas de Leads",
+    "settings": "Configuración",
+    "welcome": "Bienvenido de nuevo, Socio.",
+    "stat1": "Videos Activos",
+    "stat1_sub": "+2 esta semana",
+    "stat2": "Leads Generados",
+    "stat2_sub": "+15% vs mes pasado",
+    "stat3": "Próximo Pago",
+    "stat3_sub": "Vence en 14 días",
+    "activity_title": "Actividad Reciente",
+    "activity_desc": "Actualmente estamos migrando esta sección a n8n para actualizaciones automatizadas del sistema en vivo."
+  },
+  "footer": {
+    "tagline": "Automatizando el crecimiento para el internet moderno.",
+    "rights": "© 2026 VoxFlow AI. Todos los derechos reservados."
+  }
+}
