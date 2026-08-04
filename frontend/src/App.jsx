@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -10,7 +10,7 @@ import CaseStudies from './pages/CaseStudies';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/voxflow-ai">
       <div className="glow-bg"></div>
       <Navbar />
       <main style={{ minHeight: '80vh', paddingTop: '80px' }}>
