@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Tech Reviews Daily",
+        "url": "https://youtube.com/@techreviewsdaily",
+        "subs": 120000,
+        "email": "contact@techreviewsdaily.com"
+    },
+    {
+        "name": "Code With AI",
+        "url": "https://youtube.com/@codewithai",
+        "subs": 85000,
+        "email": "business@codewithai.dev"
+    },
+    {
+        "name": "Gadget Master",
+        "url": "https://youtube.com/@gadgetmaster",
+        "subs": 210000,
+        "email": "sponsor@gadgetmaster.net"
+    }
+]
